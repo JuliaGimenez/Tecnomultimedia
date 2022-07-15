@@ -15,6 +15,9 @@ int click=10;
 int cant=2;
 int tam;
 int pos;
+String []miarreglo=new String[3];
+int r;
+int m;
 
 void setup(){
   size(600,600);
@@ -34,7 +37,11 @@ void setup(){
    L=loadFont("Algerian-48.vlw");
     textFont(L);
     tam=width/cant;
-    
+    miarreglo[0]=("black square");
+    miarreglo[1]=("Comienza a jugar!");
+    miarreglo[2]= ("presiona la elipse para jugar");
+   r=80;
+   m=50;
 }
 
 void draw(){
@@ -43,6 +50,15 @@ if(estado=="inicio"){
   image(img,0,140);
   image(img2,0,0);
   image(img3,0,460);
+  cuadrado();
+   fill(255);
+    textSize(60);
+    text(miarreglo[0],310,100);
+    fill(227,197,27);
+    textSize(25);
+    text(miarreglo[1],310,140);
+    fill(255);
+    text(miarreglo[2],310,470);
     fill(255);
     if(dist(mouseX,mouseY,width/2,height/2+100)<=25){
     fill(0);
@@ -51,7 +67,8 @@ if(estado=="inicio"){
   ellipse(width/2,height/2+100,90,70);
   fill(255);
   textSize(40);
-    text(">",300,395);}}}
+    text(">",300,395);
+  }}}
     
     void mouseClicked(){
       if(dist(mouseX,mouseY,width/2,height/2+100)<=25){
@@ -76,12 +93,12 @@ background(0);
            if(estado=="juego"){
            background(0);
            image(img4,-150,-80);
-         fill(0);
-                 rect(150,160,190,190);
-             }}
+             fill(0);
+            rect(150,160,190,190);
+          }}
             void mousePressed(){
                if(estado=="juego"){
-                 if(mouseX>150 && mouseX< 150+200 && mouseY>150 && mouseY<150+200);
+                 if(mouseX>150 && mouseX< 150+200 && mouseY>150 && mouseY<150+200)
                  println(contadordeClick);
                  contadordeClick+=1;
              if(contadordeClick==click);
@@ -90,7 +107,8 @@ background(0);
         }
         if (contadordeClick==30){
           estado="ganar";
-            }
+           
+                       
              if( estado.equals("ganar") ){
     background( 255 );
     image(img6,0,0);
@@ -108,7 +126,7 @@ text("Para ir a los creditos \ncliclear y presionar\na la vez la letra C",350,50
             textSize(30);
             text("Creditos:\n\nTECNO MULTIMEDIAL 1\nTrabajo practico N 3\nAlumna:\nJulia Gimenez\n Legajo:91391/1",10,80);
             fill(165,0,232);
-            text("\n Profesor:\n Matias\n Jauregui Lorda\n Comision 2\n\n Gracias\n por jugar!",300,370);
+            text("\n Profesor:\n Matias\n Jauregui Lorda\n Comision 2\n\n Gracias\n por jugar!",300,370);           
     float relleno=map(mouseX, 0, width, 0, 255);
              {
              pos++;
@@ -122,19 +140,27 @@ text("Para ir a los creditos \ncliclear y presionar\na la vez la letra C",350,50
             } else {
             fill(165,0,232);
             rect(x*tam, y*tam, tam,tam);
-            }}}}}}}}}
+            }}}}}}}}}}
          void keyPressed(){
           if(estado.equals("instrucciones")&& key==' '){
           estado="juego";} 
-           reiniciar();
-         }
+           reiniciar();     
+       }
           void reiniciar(){  
              if (estado.equals("ganar")&&key==' '){
              estado="inicio";
              contadordeClick=0;
+         }
  }
+  void cuadrado(){
+    if (estado.equals("inicio")){
+   fill(165,0,232);
+   stroke(227,197,27);
+   strokeWeight(3);
+   rect(r,m,460,120);
  
- //No me salio que en algun momento pierda en el juego pero igual dejo el intento 
+    }
+    // agregue arreglos y tambien una funcion propia, pero no pude acomodar lo de perder, intente varias formas y el tiempo no corre
           //contadordeTiempo++;
            //  println( contadordeTiempo );
     //println( contadordeTiempo/60 );}
@@ -143,8 +169,8 @@ text("Para ir a los creditos \ncliclear y presionar\na la vez la letra C",350,50
              
           //             
              //if(estado==("perder")){
-             //  background(255);}}
-            // }
+              // background(255);}}
+             
            
          
       // }
