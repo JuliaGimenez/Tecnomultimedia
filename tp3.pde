@@ -18,7 +18,6 @@ int pos;
 String []miarreglo=new String[3];
 int r;
 int m;
-
 void setup(){
   size(600,600);
   background(0);
