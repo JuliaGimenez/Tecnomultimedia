@@ -1,8 +1,6 @@
 // Puzzle 
 
-//Figura; ( seria como el objetivo a realizar)
-
-//Formas de puzzle A, B, C ;(van a ser 3)
+//Juego;
 
 // Completado; (pantalla o texto, todavia no se cual voy a realizar, que avise que la figura fue correctamente realizada) 
 
@@ -25,4 +23,3 @@
 //mousePressed o keyPressed (para presionar cuando se termine de realizar la figura);
 
 //VolverAJugar();
-//rotar();

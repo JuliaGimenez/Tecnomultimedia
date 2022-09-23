@@ -10,4 +10,4 @@
 //forma geometrica que va a ser
 
  //Métodos
-// Cambiarcolor();
+// 

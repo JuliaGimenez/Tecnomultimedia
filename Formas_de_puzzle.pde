@@ -9,4 +9,4 @@
 //Color: las 3 van a ser distinto color pero al juntarlas de forma correcta se pondrán del mismo.
 
  //Métodos
-//Rotar() mover()
+// mover()
