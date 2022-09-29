@@ -1,25 +1,23 @@
+//https://youtu.be/2WENTxP4nMc
 // Puzzle 
 
 //Juego;
+ 
+juego juegoNuevo;
+//PImage img;
 
-// Completado; (pantalla o texto, todavia no se cual voy a realizar, que avise que la figura fue correctamente realizada) 
+void setup(){
+size(800,800);
+background(255);
+juegoNuevo=new juego();
 
-
-
-//Void Setup;
-
-
-
+}
 
 //Void draw;
+void draw(){
+  background(255);
+  juegoNuevo.comenzarJuego();
+ 
 
-
-
-
-//MouseDragged(); (para poder mover las formas del puzzle);
-
-//mover();
-
-//mousePressed o keyPressed (para presionar cuando se termine de realizar la figura);
-
-//VolverAJugar();
+  }
+  
