@@ -1,0 +1,5 @@
+/*
+class Creditos
+clase que simulara una pantalla que muestre texto con informacion.
+
+*/
