@@ -1,18 +1,40 @@
-/*
-class disparo{
-es un objeto que sera instanciado en forma de array de objetos.
 
-
-//Constructor
-el constructor recibira como parametros la posicion del avion principal
-
-//Metodos
-
-void mostrar(){
-cuando aparecen los disparos
+public class Disparo
+{
+  PImage imagenCohete;
+  float movBalaX;
+  float movBalaY;
+  float posicionInicioDisparo;
+  float velocidadDisparo = 5;
+  boolean nuevo = false;
+  public Disparo(float posicionInicioDisparo)
+  {
+    imagenCohete = loadImage("disparo.png");
+    imagenCohete.resize(20,25);
+    this.posicionInicioDisparo = posicionInicioDisparo;
+  }
+  
+  void Movimiento(float inicioX)
+  {
+      movBalaY+=velocidadDisparo;
+      if(((575-height/2)-movBalaY)<-400)
+        {
+          fileDisparo.loop();
+          nuevo = true;
+          movBalaY=0;
+          movBalaX=0;
+        }
+        image(imagenCohete,(400-width/2)+movBalaX+inicioX-7,(575-height/2)-movBalaY);
+      
+     
+  }
+  
+   float PosicionX(float inicioX)
+  {   
+    return (400-width/2)+movBalaX+inicioX;
+  }
+   float PosicionY()
+  {
+    return (575-height/2)-movBalaY;
+  }
 }
-
-void desaparecer(){}
-cuando ya desaparecen los disparos 
-
-*/
